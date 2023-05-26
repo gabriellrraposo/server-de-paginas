@@ -1,7 +1,7 @@
 const db = require('./db')
 
 const cadastros = {
-    Cadastro: db.sequelize.define("user", {
+    Cadastro: db.sequelize.define("usuarios", {
         email: {
             type: db.Sequelize.STRING
         },
@@ -11,9 +11,11 @@ const cadastros = {
         password: {
             type: db.Sequelize.STRING
         }
+    }, {
+        tableName: 'usuarios'
     }),
 
-    CadastroAnimal: db.sequelize.define("animal", {
+    CadastroAnimal: db.sequelize.define("animais", {
         idade: {
             type: db.Sequelize.INTEGER
         },
@@ -23,6 +25,8 @@ const cadastros = {
         raca: {
             type: db.Sequelize.STRING
         }
+    }, {
+        tableName: 'animais'
     }),
 
     CadastroNatan: db.sequelize.define("natan", {
